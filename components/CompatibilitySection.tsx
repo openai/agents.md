@@ -49,33 +49,33 @@ export default function CompatibilitySection() {
     {
       name: "Aider",
       url: "https://aider.chat/docs/usage/conventions.html#always-load-conventions",
-      imageSrc: "logos/aider.svg",
+      imageSrc: "/logos/aider.svg",
     },
     {
       name: "Gemini CLI",
       url: "https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#available-settings-in-settingsjson",
       from: "Google",
-      imageSrc: "logos/gemini.svg",
+      imageSrc: "/logos/gemini.svg",
     },
     {
       name: "Kilo Code",
       url: "https://kilocode.ai/",
-      imageSrc: "logos/kilo-code.svg",
+      imageSrc: "/logos/kilo-code.svg",
     },
     {
       name: "OpenCode",
       url: "https://opencode.ai/docs/rules/",
-      imageSrc: "logos/opencode.svg",
+      imageSrc: "/logos/opencode.svg",
     },
     {
       name: "Phoenix",
       url: "https://phoenix.new/",
-      imageSrc: "logos/phoenix.svg",
+      imageSrc: "/logos/phoenix.svg",
     },
     {
       name: "Zed",
       url: "https://zed.dev/docs/ai/rules",
-      imageSrc: "logos/zed.svg",
+      imageSrc: "/logos/zed.svg",
     },
   ];
   return (
