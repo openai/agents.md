@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "@/components/Section";
 import CodeExample from "@/components/CodeExample";
+import Link from "next/link";
 
 interface FAQItem {
   question: string;
@@ -45,6 +46,15 @@ export default function FAQ() {
           </div>
         </>
       ),
+    },
+    { question: "What if my agent doesn't support AGENTS.md natively?",
+      answer: (<>
+        <p className="mb-2">
+        If your agent doesn't support AGENTS.md natively, you can still configure{" "}
+        <Link className="underline hover:no-underline" href="#workaround">a workaround</Link> to use it:
+        </p>
+      </>
+    )
     },
     {
       question: "How do I configure Aider?",
