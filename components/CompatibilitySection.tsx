@@ -77,6 +77,11 @@ export default function CompatibilitySection() {
       url: "https://zed.dev/docs/ai/rules",
       imageSrc: "/logos/zed.svg",
     },
+    {
+      name: "Semgrep",
+      url: "https://semgrep.dev",
+      imageSrc: "/logos/semgrep.svg",
+    },
   ];
   return (
     <Section
