@@ -14,6 +14,12 @@ export default function CompatibilitySection() {
 
   const agents: AgentEntry[] = [
     {
+      name: "Claude Code",
+      url: "https://docs.anthropic.com/en/docs/claude-code",
+      from: "Anthropic",
+      // Logo to be added when available
+    },
+    {
       name: "Codex",
       url: "https://openai.com/codex/",
       from: "OpenAI",
