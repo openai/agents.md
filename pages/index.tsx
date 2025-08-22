@@ -9,7 +9,7 @@ import CompatibilitySection from "@/components/CompatibilitySection";
 import { GetStaticProps } from "next";
 import WhySection from "@/components/WhySection";
 import AboutSection from "@/components/AboutSection";
-import WorkaroundSection from "@/components/WorkaroundSection";
+import ConfigurationSection from "@/components/ConfigurationSection";
 
 interface LandingPageProps {
   contributorsByRepo: Record<string, { avatars: string[]; total: number }>;
@@ -27,7 +27,7 @@ export default function LandingPage({ contributorsByRepo }: LandingPageProps) {
         <div className="flex-1 flex flex-col gap-4 mt-16">
           <AboutSection />
           <FAQSection />
-          <WorkaroundSection />
+          <ConfigurationSection />
         </div>
       </main>
 
