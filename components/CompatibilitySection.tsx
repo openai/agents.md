@@ -77,6 +77,11 @@ export default function CompatibilitySection() {
       url: "https://zed.dev/docs/ai/rules",
       imageSrc: "/logos/zed.svg",
     },
+    {
+      name: "Warp",
+      url: "https://docs.warp.dev/knowledge-and-collaboration/rules#project-scoped-rules-1",
+      imageSrc: "/logos/warp.svg",
+    },
   ];
   return (
     <Section
