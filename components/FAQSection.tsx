@@ -90,17 +90,17 @@ export default function FAQ() {
     <Section
       id="faq"
       title="FAQ"
-      className="py-20"
+      className="py-32"
       center
-      maxWidthClass="max-w-3xl"
+      maxWidthClass="max-w-5xl"
     >
-      <div className="space-y-8 max-w-4xl mx-auto">
+      <div className="grid gap-6 max-w-4xl mx-auto">
         {faqItems.map((item, index) => (
-          <div key={index}>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          <div key={index} className="glass-card p-8 rounded-2xl hover-lift group transition-all duration-300 animate-scale-in" style={{animationDelay: `${index * 0.05}s`}}>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
               {item.question}
             </h3>
-            <div className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
               {item.answer}
             </div>
           </div>

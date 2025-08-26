@@ -1,5 +1,4 @@
 import React from "react";
-import ClipboardIcon from "./icons/ClipboardIcon";
 import CopyIcon from "./icons/CopyIcon";
 
 interface CodeExampleProps {
@@ -72,8 +71,12 @@ function parseMarkdown(md: string): React.ReactNode[] {
 
     // Handle headers
     if (line.startsWith("# ") || line.startsWith("## ") || line.startsWith("### ")) {
+      const level = line.match(/^#+/)?.[0].length || 1;
+      const headerClass = level === 1 
+        ? "font-bold text-lg text-accent-600 dark:text-accent-400 mb-1" 
+        : "font-semibold text-base text-accent-700 dark:text-accent-300 mb-0.5";
       elements.push(
-        <div key={i} className="font-bold">
+        <div key={i} className={headerClass}>
           {line}
         </div>
       );
@@ -110,7 +113,7 @@ function renderLineWithInlineCode(line: string): React.ReactNode {
     if (part.startsWith("`") && part.endsWith("`")) {
       // This is inline code
       return (
-        <span key={index} className="bg-gray-200 dark:bg-gray-800 px-1 rounded">
+        <span key={index} className="bg-accent-100 dark:bg-accent-900/30 text-accent-800 dark:text-accent-200 px-2 py-0.5 rounded-md font-medium">
           {part}
         </span>
       );
@@ -125,7 +128,6 @@ function renderLineWithInlineCode(line: string): React.ReactNode {
  */
 export default function CodeExample({
   code,
-  href,
   compact = false,
   heightClass,
   centerVertically = false,
@@ -148,7 +150,7 @@ export default function CodeExample({
       <div className="relative">
         <button
           onClick={copyToClipboard}
-          className={`absolute right-3 p-2 rounded-md bg-transparent text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors z-10 cursor-pointer ${
+          className={`absolute right-3 p-2.5 rounded-xl glass-card hover:glass-card-hover transition-all duration-300 z-10 cursor-pointer group ${
             centerVertically ? "top-1/2 -translate-y-1/2" : "top-3"
           }`}
           aria-label="Copy to clipboard"
@@ -172,15 +174,15 @@ export default function CodeExample({
           )}
         </button>
         <pre
-          className={`relative rounded-lg bg-white dark:bg-black text-gray-800 dark:text-gray-100 text-xs leading-6 overflow-x-auto p-4 ${
+          className={`relative rounded-2xl glass-card text-gray-800 dark:text-gray-100 text-sm leading-7 overflow-x-auto p-6 font-mono ${
             centerVertically ? "flex items-center" : ""
           } ${
             heightClass
               ? heightClass
               : compact
               ? ""
-              : "min-h-[250px] max-h-[500px]"
-          } border border-gray-200 dark:border-gray-700 shadow-sm`}
+              : "min-h-[280px] max-h-[520px]"
+          } shadow-apple border border-white/20 dark:border-white/10`}
         >
           <code>
             {parseMarkdown(md)}
@@ -195,11 +197,16 @@ export default function CodeExample({
   }
 
   return (
-    <section className="px-6 pt-10 pb-24 bg-gray-50 dark:bg-gray-900/40">
-      <div className="max-w-5xl mx-auto flex flex-col gap-6">
-        <h2 className="text-3xl font-semibold tracking-tight">
-          AGENTS.md in action
-        </h2>
+    <section className="px-6 pt-16 pb-32 bg-gradient-to-b from-gray-50/50 to-white dark:from-gray-900/40 dark:to-gray-950/60">
+      <div className="max-w-5xl mx-auto flex flex-col gap-8">
+        <div className="text-center space-y-3">
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent">
+            AGENTS.md in action
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            See how a real AGENTS.md file looks and copy it to get started
+          </p>
+        </div>
         {content}
       </div>
     </section>
