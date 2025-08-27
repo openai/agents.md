@@ -63,7 +63,7 @@ export default function CompatibilitySection() {
       imageSrc: "/logos/kilo-code.svg",
     },
     {
-      name: "OpenCode",
+      name: "opencode",
       url: "https://opencode.ai/docs/rules/",
       imageSrc: "/logos/opencode.svg",
     },
