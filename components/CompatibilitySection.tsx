@@ -63,7 +63,7 @@ export default function CompatibilitySection() {
       imageSrc: "/logos/kilo-code.svg",
     },
     {
-      name: "OpenCode",
+      name: "opencode",
       url: "https://opencode.ai/docs/rules/",
       imageSrc: "/logos/opencode.svg",
     },
@@ -81,6 +81,10 @@ export default function CompatibilitySection() {
       name: "Warp",
       url: "https://docs.warp.dev/knowledge-and-collaboration/rules#project-scoped-rules-1",
       imageSrc: "/logos/warp.svg",
+    },
+      name: "Semgrep",
+      url: "https://semgrep.dev",
+      imageSrc: "/logos/semgrep.svg",
     },
   ];
   return (
