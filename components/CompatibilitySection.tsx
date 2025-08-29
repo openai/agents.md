@@ -58,6 +58,12 @@ export default function CompatibilitySection() {
       imageSrc: "/logos/gemini.svg",
     },
     {
+      name: "Android Studio",
+      url: "https://developer.android.com/studio/gemini/agent-files",
+      from: "Google",
+      imageSrc: "/logos/android-studio.svg",
+    },
+    {
       name: "Kilo Code",
       url: "https://kilocode.ai/",
       imageSrc: "/logos/kilo-code.svg",
