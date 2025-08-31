@@ -89,7 +89,7 @@ export default function FAQ() {
       answer: (
         <>
           <p className="mb-2">
-            Claude code allows multiple <b>Memory</b> files <br />
+            Claude Code allows multiple <b>Memory</b> files <br />
             You can refer another file in CLAUDE.md with <code>@</code>{'{'}filepath{'}'} <br />
             Configure Claude Code to use AGENTS.md in <code>CLAUDE.md</code>:
           </p>
