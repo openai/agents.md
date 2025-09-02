@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function CopyIcon({ className = "w-4 h-4 flex-shrink-0" }) {
+interface CopyIconProps {
+  className?: string;
+}
+
+export default function CopyIcon({ className = "w-4 h-4 flex-shrink-0" }: CopyIconProps) {
   return (
     <svg
       className={className}
