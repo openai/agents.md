@@ -88,6 +88,12 @@ export default function CompatibilitySection() {
       imageSrc: "/logos/warp.svg",
     },
     {
+      name: "Coding agent",
+      from: "GitHub Copilot",
+      url: "https://gh.io/coding-agent-docs",
+      imageSrc: "/logos/copilot.svg",
+    },
+    {
       name: "Ona",
       url: "https://ona.com",
       imageSrcLight: "/logos/ona-light.svg",
