@@ -22,12 +22,12 @@ export default function Hero() {
             <br className="hidden sm:block" />
             used by over{" "}
             <a
-              href="https://github.com/search?q=path%3AAGENTS.md&type=code"
+              href="https://github.com/search?q=path%3A%2F%28^|\%2F%29AGENTS\.md%24%2F+NOT+is%3Afork&type=code"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:no-underline"
             >
-              20k open-source projects
+              9k open-source projects
             </a>
             .
           </p>
