@@ -7,6 +7,7 @@ const LANG_BG_COLORS: Record<string, string> = {
   "Python": "#3572a5",
   "Rust": "#dea584",
   "C++": "#f34b7d",
+  "Go": "#00add8",
 };
 
 interface RepoCardProps {
@@ -42,6 +43,26 @@ const REPOS: RepoCardProps[] = [
     description: "A superset of Lua 5.4 with a focus on general-purpose programming.",
     language: "C++",
   },
+  {
+    name: "anyproto/anytype-heart",
+    description: "Middleware library for local-first, P2P knowledge management system.",
+    language: "Go",
+  },
+  {
+    name: "BloopAI/vibe-kanban",
+    description: "Modern kanban board with AI-driven project management features.",
+    language: "Rust",
+  },
+  {
+    name: "sourcegraph/docs",
+    description: "Web app and content for Sourcegraph's developer documentation.",
+    language: "TypeScript",
+  },
+  {
+    name: "Eventual-Inc/Daft",
+    description: "Distributed query engine for multimodal data processing at scale.",
+    language: "Rust",
+  },
 ];
 
 interface ExampleListSectionProps {
@@ -61,8 +82,8 @@ const InnerGrid = ({
           key={repo.name}
           repo={repo}
           avatars={contributorsByRepo[repo.name]?.avatars ?? []}
-          hideOnSmall={key > 3}
-          hideOnMedium={key > 2}
+          hideOnSmall={key > 7}
+          hideOnMedium={key > 5}
           totalContributors={
             contributorsByRepo[repo.name]?.total ??
             contributorsByRepo[repo.name]?.avatars.length ??
