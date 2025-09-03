@@ -82,8 +82,8 @@ const InnerGrid = ({
           key={repo.name}
           repo={repo}
           avatars={contributorsByRepo[repo.name]?.avatars ?? []}
-          hideOnSmall={key > 7}
-          hideOnMedium={key > 5}
+          hideOnSmall={key > 3}
+          hideOnMedium={key > 2}
           totalContributors={
             contributorsByRepo[repo.name]?.total ??
             contributorsByRepo[repo.name]?.avatars.length ??
