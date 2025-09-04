@@ -99,6 +99,14 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/ona-light.svg",
       imageSrcDark: "/logos/ona-dark.svg",
     },
+    {
+      name: "Devin",
+      from: "Cognition",
+      url: "https://devin.ai",
+      imageSrcLight: "/logos/devin-light.svg",
+      imageSrcDark: "/logos/devin-dark.svg",
+    },
+
   ];
   return (
     <Section
