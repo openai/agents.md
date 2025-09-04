@@ -58,12 +58,6 @@ export default function CompatibilitySection() {
       imageSrc: "/logos/gemini.svg",
     },
     {
-      name: "Android Studio",
-      url: "https://developer.android.com/studio/gemini/agent-files",
-      from: "Google",
-      imageSrc: "/logos/android-studio.svg",
-    },
-    {
       name: "Kilo Code",
       url: "https://kilocode.ai/",
       imageSrc: "/logos/kilo-code.svg",
@@ -104,6 +98,12 @@ export default function CompatibilitySection() {
       url: "https://ona.com",
       imageSrcLight: "/logos/ona-light.svg",
       imageSrcDark: "/logos/ona-dark.svg",
+    },
+    {
+      name: "Android Studio",
+      url: "https://developer.android.com/studio/gemini/agent-files",
+      from: "Google",
+      imageSrc: "/logos/android-studio.svg",
     },
   ];
   return (
