@@ -93,6 +93,18 @@ export default function CompatibilitySection() {
       url: "https://docs.warp.dev/knowledge-and-collaboration/rules#project-scoped-rules-1",
       imageSrc: "/logos/warp.svg",
     },
+    {
+      name: "Coding agent",
+      from: "GitHub Copilot",
+      url: "https://gh.io/coding-agent-docs",
+      imageSrc: "/logos/copilot.svg",
+    },
+    {
+      name: "Ona",
+      url: "https://ona.com",
+      imageSrcLight: "/logos/ona-light.svg",
+      imageSrcDark: "/logos/ona-dark.svg",
+    },
   ];
   return (
     <Section
