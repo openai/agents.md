@@ -99,6 +99,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/ona-light.svg",
       imageSrcDark: "/logos/ona-dark.svg",
     },
+    {
+      name: "Android Studio",
+      url: "https://developer.android.com/studio/gemini/agent-files",
+      from: "Google",
+      imageSrc: "/logos/android-studio.svg",
+    },
   ];
   return (
     <Section
