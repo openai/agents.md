@@ -99,6 +99,11 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/ona-light.svg",
       imageSrcDark: "/logos/ona-dark.svg",
     },
+    {
+      name: "Quests",
+      url: "https://quests.dev",
+      imageSrc: "/logos/quests.svg",
+    },
   ];
   return (
     <Section
