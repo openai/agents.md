@@ -101,7 +101,8 @@ export default function CompatibilitySection() {
     },
     {
       name: "Devin",
-      url: "https://www.cognition.ai",
+      from: "Cognition",
+      url: "https://devin.ai",
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
