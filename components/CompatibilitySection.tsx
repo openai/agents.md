@@ -99,6 +99,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/ona-light.svg",
       imageSrcDark: "/logos/ona-dark.svg",
     },
+    {
+      name: "Capy",
+      url: "https://capy.ai",
+      imageSrcLight: "/logos/capy-light.svg",
+      imageSrcDark: "/logos/capy-dark.svg",
+    },
   ];
   return (
     <Section
