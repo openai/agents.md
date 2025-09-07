@@ -99,6 +99,11 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/ona-light.svg",
       imageSrcDark: "/logos/ona-dark.svg",
     },
+    {
+      name: "Builder.io",
+      url: "https://www.builder.io/",
+      imageSrc: "/logos/builder.svg",
+    },
   ];
   return (
     <Section
@@ -114,14 +119,7 @@ export default function CompatibilitySection() {
       </p>
       <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 items-stretch">
         {agents.map(
-          ({
-            name,
-            url,
-            from,
-            imageSrc,
-            imageSrcLight,
-            imageSrcDark,
-          }) => {
+          ({ name, url, from, imageSrc, imageSrcLight, imageSrcDark }) => {
             return (
               <a
                 key={name}
@@ -130,7 +128,7 @@ export default function CompatibilitySection() {
                 rel="noopener noreferrer"
                 className="flex w-full h-20 p-3 items-center rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
               >
-                 <div className="w-16 h-16 flex items-center justify-center mr-3">
+                <div className="w-16 h-16 flex items-center justify-center mr-3">
                   {imageSrcLight && imageSrcDark ? (
                     <>
                       <Image
@@ -164,7 +162,7 @@ export default function CompatibilitySection() {
                       }}
                     />
                   ) : null}
-                 </div>
+                </div>
                 <div className="flex flex-col justify-center">
                   <span className="text-xl font-semibold leading-tight text-gray-700 dark:text-gray-400">
                     {name}
