@@ -94,6 +94,12 @@ export default function CompatibilitySection() {
       imageSrc: "/logos/copilot.svg",
     },
     {
+      name: "VS Code",
+      url: "https://code.visualstudio.com/docs/editor/artificial-intelligence",
+      imageSrcLight: "/logos/vscode-light.svg",
+      imageSrcDark: "/logos/vscode-dark.svg",
+    },
+    {
       name: "Ona",
       url: "https://ona.com",
       imageSrcLight: "/logos/ona-light.svg",
