@@ -45,18 +45,25 @@ export default function HowToUseSection() {
   return (
     <Section
       title="How to use AGENTS.md?"
-      className="py-12"
+      className="py-32"
       center
-      maxWidthClass="max-w-3xl"
+      maxWidthClass="max-w-5xl"
     >
-      <div className="space-y-6 text-left">
+      <div className="grid gap-8 md:gap-6">
         {steps.map((s, idx) => (
-          <div key={idx}>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              {idx + 1}. {s.title}
-            </h3>
-            <div className="text-gray-700 dark:text-gray-300">
-              {s.body}
+          <div key={idx} className="glass-card p-8 rounded-2xl hover-lift group transition-all duration-300 animate-scale-in" style={{animationDelay: `${idx * 0.1}s`}}>
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                {idx + 1}
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                  {s.title}
+                </h3>
+                <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  {s.body}
+                </div>
+              </div>
             </div>
           </div>
         ))}
