@@ -112,6 +112,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "Rovo Dev",
+      from: "Atlassian",
+      url: "https://www.atlassian.com/rovo-dev",
+      imageSrc: "/logos/rovo_dev.svg",
+    },
 
   ];
   return (
