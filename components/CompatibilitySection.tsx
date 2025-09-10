@@ -112,6 +112,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "Tiny Agents",
+      from: "Hugging Face",
+      url: "https://huggingface.co/blog/python-tiny-agents",
+      imageSrc: "/logos/hf-logo.svg",
+    },
 
   ];
   return (
