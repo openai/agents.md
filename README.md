@@ -49,3 +49,26 @@ that explains the project’s goals in a simple way, and featuring some examples
    npm run dev
    ```
 3. Open your browser and go to http://localhost:3000
+
+## Use with VS Code’s native system
+
+If you want to use AGENTS.md content with VS Code’s native system, convert it to .instructions.md format:
+
+- Create `.github/instructions/agents.instructions.md`.
+- Add frontmatter to specify when it applies:
+
+```text
+---
+applyTo: "**"
+description: "Project-specific coding guidelines"
+---
+```
+
+- Paste your AGENTS.md content below the frontmatter:
+
+```markdown
+# Your AGENTS.md content goes here
+- Use TypeScript strict mode
+- Prefer functional components
+- etc...
+```
