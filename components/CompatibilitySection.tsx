@@ -112,7 +112,11 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
-
+    {
+      name: "Quests",
+      url: "https://quests.dev",
+      imageSrc: "/logos/quests.svg",
+    },
   ];
   return (
     <Section
