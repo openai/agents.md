@@ -112,6 +112,11 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "Gitar",
+      url: "https://gitar.ai",
+      imageSrc: "/logos/gitar.svg",
+    },
 
   ];
   return (
