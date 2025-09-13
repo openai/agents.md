@@ -112,7 +112,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
-
+    {
+      name: "Crush",
+      url: "https://github.com/charmbracelet/crush",
+      from: "Charm",
+      imageSrc: "/logos/crush.svg"
+    },
   ];
   return (
     <Section
