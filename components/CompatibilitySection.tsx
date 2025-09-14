@@ -112,6 +112,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "Tembo",
+      url: "https://tembo.io",
+      imageSrcLight: "/logos/tembo-light.svg",
+      imageSrcDark: "/logos/tembo-dark.svg",
+    },
 
   ];
   return (
