@@ -114,7 +114,7 @@ export default function CompatibilitySection() {
     },
     {
       name: "Crush",
-      url: "https://github.com/charmbracelet/crush",
+      url: "https://charm.land/crush",
       from: "Charm",
       imageSrc: "/logos/crush.svg"
     },
