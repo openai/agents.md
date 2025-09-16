@@ -94,17 +94,30 @@ export default function CompatibilitySection() {
       imageSrc: "/logos/copilot.svg",
     },
     {
+      name: "VS Code",
+      url: "https://code.visualstudio.com/docs/editor/artificial-intelligence",
+      imageSrcLight: "/logos/vscode-light.svg",
+      imageSrcDark: "/logos/vscode-dark.svg",
+    },
+    {
       name: "Ona",
       url: "https://ona.com",
       imageSrcLight: "/logos/ona-light.svg",
       imageSrcDark: "/logos/ona-dark.svg",
     },
     {
+      name: "Devin",
+      from: "Cognition",
+      url: "https://devin.ai",
+      imageSrcLight: "/logos/devin-light.svg",
+      imageSrcDark: "/logos/devin-dark.svg",
+    },
+    {
       name: "Capy",
       url: "https://capy.ai",
       imageSrcLight: "/logos/capy-light.svg",
       imageSrcDark: "/logos/capy-dark.svg",
-    },
+    }
   ];
   return (
     <Section
