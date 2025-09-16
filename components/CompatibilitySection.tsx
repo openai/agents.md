@@ -112,7 +112,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
-
+    {
+      name: "Capy",
+      url: "https://capy.ai",
+      imageSrcLight: "/logos/capy-light.svg",
+      imageSrcDark: "/logos/capy-dark.svg",
+    }
   ];
   return (
     <Section
