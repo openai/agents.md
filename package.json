@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/oxide": "^4.1.13",
     "@tailwindcss/postcss": "4.1.11",
     "@vercel/analytics": "^1.5.0",
+    "lightningcss": "^1.30.1",
     "next": "15.4.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "tailwindcss": "4.1.11"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
