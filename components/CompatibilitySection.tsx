@@ -112,6 +112,11 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "CodeRabbit",
+      url: "https://coderabbit.ai/",
+      imageSrc: "/logos/coderabbit.svg",
+    },
 
   ];
   return (
