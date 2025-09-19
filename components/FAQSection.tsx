@@ -89,7 +89,7 @@ export default function FAQ() {
       answer: (
         <>
           <p className="mb-2">
-            By default, CodeRabbit will use your project's AGENTS.md file without additonal configuration for
+            By default, CodeRabbit will use your project's AGENTS.md file without additional configuration for
             <a
               href="https://www.coderabbit.ai/#features"
               target="_blank"
