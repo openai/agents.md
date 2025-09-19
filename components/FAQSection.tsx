@@ -84,6 +84,43 @@ export default function FAQ() {
         </>
       ),
     },
+    {
+      question: "How do I configure CodeRabbit?",
+      answer: (
+        <>
+          <p className="mb-2">
+            By default, CodeRabbit will use your project's AGENTS.md file without additional configuration for
+            <a
+              href="https://www.coderabbit.ai/#features"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:no-underline"
+            >
+              {" "}Pull Request Reviews
+            </a>
+            {", "}
+            <a
+              href="https://www.coderabbit.ai/ide"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:no-underline"
+            >
+              IDE Reviews
+            </a>
+            {", and "}
+            <a
+              href="https://www.coderabbit.ai/cli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:no-underline"
+            >
+              CLI Reviews
+            </a>
+            {"."}
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (
