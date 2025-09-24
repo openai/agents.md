@@ -76,7 +76,7 @@ const InnerGrid = ({
         href="https://github.com/search?q=path%3AAGENTS.md&type=code"
         className="text-base font-medium underline hover:no-underline"
       >
-        View 20k+ examples on GitHub
+        View 30k+ examples on GitHub
       </a>
     </div>
   </>

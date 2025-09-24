@@ -27,7 +27,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="underline hover:no-underline"
             >
-              20k open-source projects
+              30k open-source projects
             </a>
             .
           </p>
