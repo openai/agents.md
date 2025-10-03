@@ -112,6 +112,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "Qodo",
+      url: "https://qodo.ai",
+      imageSrcLight: "/logos/qodo-light.svg",
+      imageSrcDark: "/logos/qodo.svg",
+    },
 
   ];
   return (
