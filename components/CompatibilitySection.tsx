@@ -53,7 +53,7 @@ export default function CompatibilitySection() {
     },
     {
       name: "Gemini CLI",
-      url: "https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/configuration.md#available-settings-in-settingsjson",
+      url: "https://github.com/google-gemini/gemini-cli/blob/main/docs/get-started/configuration.md#available-settings-in-settingsjson",
       from: "Google",
       imageSrc: "/logos/gemini.svg",
     },
