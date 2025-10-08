@@ -112,7 +112,11 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
-
+    {
+      name: "Tidewave",
+      url: "https://tidewave.ai/",
+      imageSrc: "/logos/tidewave.svg",
+    },
   ];
   return (
     <Section
