@@ -112,6 +112,12 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "Q Developer CLI",
+      from: "Amazon",
+      url: "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html",
+      imageSrc: "/logos/q-developer.svg",
+    },
 
   ];
   return (
