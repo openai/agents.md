@@ -18,10 +18,12 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "20",
-    "@types/react": "19",
-    "@types/react-dom": "19",
-    "typescript": "5"
+    "@types/node": "^20.19.11",
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.8",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.0",
+    "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@9.15.1+sha256.9e534e70afef06374f6126b44bda5760947135ce16a30aef1010e965fb7e3e3e"
 }

@@ -74,9 +74,12 @@ const InnerGrid = ({
     <div className="flex justify-center mt-6">
       <a
         href="https://github.com/search?q=path%3AAGENTS.md&type=code"
-        className="text-base font-medium underline hover:no-underline"
+        className="btn-secondary inline-flex items-center gap-2 text-base font-medium transition-all duration-300 hover:scale-105"
       >
-        View 20k+ examples on GitHub
+        <span>View 20k+ examples on GitHub</span>
+        <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
       </a>
     </div>
   </>
@@ -126,10 +129,10 @@ function ExampleCard({
 
   return (
     <a
-      href={`https://github.com/${repo.name}/blob/-/AGENTS.md`}
+      href={`https://github.com/${repo.name}/blob/main/AGENTS.md`}
       target="_blank"
       rel="noopener noreferrer"
-      className={`lg:aspect-video bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm flex flex-col justify-between p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors ${
+      className={`lg:aspect-video glass-card hover:glass-card-hover rounded-2xl flex flex-col justify-between p-5 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 group shadow-apple hover-lift hover-glow animate-scale-in ${
         hideOnSmall
           ? "hidden lg:flex"
           : hideOnMedium
@@ -139,19 +142,19 @@ function ExampleCard({
     >
       <div>
         <h3
-          className="font-semibold text-lg leading-snug truncate"
+          className="font-semibold text-lg leading-snug truncate group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-300"
           title={repo.name}
         >
           {repo.name}
         </h3>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
           {repo.description}
         </p>
       </div>
 
       <div className="flex items-end justify-between mt-4">
         <span
-          className="text-xs font-semibold px-2 py-0.5 rounded"
+          className="text-xs font-semibold px-3 py-1 rounded-full transition-all duration-300 group-hover:scale-105"
           style={{ backgroundColor: badgeBg, color: "#fff" }}
         >
           {repo.language}
@@ -176,7 +179,7 @@ function ExampleCard({
                   />
                 ))}
           </div>
-          <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 translate-y-[1px]">
+          <span className="ml-2 text-xs font-semibold px-3 py-1 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 translate-y-[1px] transition-all duration-300 group-hover:bg-accent-200 dark:group-hover:bg-accent-800/40">
             + {totalContributors}
           </span>
         </div>

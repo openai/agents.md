@@ -18,18 +18,34 @@ export default function LandingPage({ contributorsByRepo }: LandingPageProps) {
   return (
     <div className="flex flex-col min-h-screen items-stretch font-sans">
       <main>
-        <Hero />
-        <WhySection />
-        <CompatibilitySection />
-        <ExamplesSection contributorsByRepo={contributorsByRepo} />
-        <HowToUseSection />
+        <div className="animate-fade-in-down">
+          <Hero />
+        </div>
+        <div className="animate-fade-in-up animate-stagger-1">
+          <WhySection />
+        </div>
+        <div className="animate-fade-in-up animate-stagger-2">
+          <CompatibilitySection />
+        </div>
+        <div className="animate-fade-in-up animate-stagger-3">
+          <ExamplesSection contributorsByRepo={contributorsByRepo} />
+        </div>
+        <div className="animate-fade-in-up animate-stagger-4">
+          <HowToUseSection />
+        </div>
         <div className="flex-1 flex flex-col gap-4 mt-16">
-          <AboutSection />
-          <FAQSection />
+          <div className="animate-fade-in-left">
+            <AboutSection />
+          </div>
+          <div className="animate-fade-in-right">
+            <FAQSection />
+          </div>
         </div>
       </main>
 
-      <Footer />
+      <div className="animate-fade-in-up">
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -126,7 +142,7 @@ export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
             total = parseInt(match[1], 10);
           }
         } else {
-          const oneData = countRes.ok ? ((await countRes.json()) as any[]) : [];
+          const oneData = countRes.ok ? ((await countRes.json()) as Array<{ avatar_url: string }>) : [];
           total = oneData.length;
         }
       } catch {

@@ -124,7 +124,7 @@ export default function CompatibilitySection() {
         Your agent definitions are compatible with a growing ecosystem of AI
         coding agents and tools:
       </p>
-      <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 items-stretch">
+      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-6 items-stretch">
         {agents.map(
           ({ name, url, from, imageSrc, imageSrcLight, imageSrcDark }) => {
             return (
@@ -133,7 +133,7 @@ export default function CompatibilitySection() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full h-20 p-3 items-center rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="flex w-full h-20 p-4 items-center rounded-2xl glass-card hover:glass-card-hover transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 hover-lift hover-glow group"
               >
                 <div className="w-16 h-16 flex items-center justify-center mr-3">
                   {imageSrcLight && imageSrcDark ? (
@@ -171,13 +171,13 @@ export default function CompatibilitySection() {
                   ) : null}
                 </div>
                 <div className="flex flex-col justify-center">
-                  <span className="text-xl font-semibold leading-tight text-gray-700 dark:text-gray-400">
+                  <span className="text-lg font-semibold leading-tight text-gray-800 dark:text-gray-200 group-hover:text-accent-600 dark:group-hover:text-accent-400 transition-colors duration-300">
                     {name}
                   </span>
                   {from ? (
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                    <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-300">
                       <span className="font-light">from</span>{" "}
-                      <span className="font-semibold">{from}</span>
+                      <span className="font-medium">{from}</span>
                     </span>
                   ) : null}
                 </div>
