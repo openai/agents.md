@@ -111,6 +111,11 @@ export default function CompatibilitySection() {
       imageSrcLight: "/logos/devin-light.svg",
       imageSrcDark: "/logos/devin-dark.svg",
     },
+    {
+      name: "Kombai",
+      url: "https://kombai.com",
+      imageSrc: "/logos/kombai.svg",
+    },
   ];
   return (
     <Section
