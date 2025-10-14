@@ -299,7 +299,7 @@ export default function CompatibilitySection() {
     <Section
       id="compatibility"
       title="One AGENTS.md works across many agents"
-      className="py-12"
+      className={`py-12 px-0 ${showGrid ? "" : "!px-0"}`}
       center
       maxWidthClass={showGrid ? "max-w-3xl" : "max-w-none"}
     >
