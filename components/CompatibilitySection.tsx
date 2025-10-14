@@ -213,15 +213,17 @@ function LogoMarqueeRow({
     return null;
   }
 
+  const trackStyle = {
+    animationPlayState: isActive ? "running" : "paused",
+    animationDelay: offset ? `${offset}s` : undefined,
+    "--marquee-duration": `${duration}s`,
+  } as React.CSSProperties;
+
   return (
     <div className="w-full overflow-hidden">
       <div
         className="logo-marquee-track flex items-center gap-8 py-3"
-        style={{
-          animationPlayState: isActive ? "running" : "paused",
-          animationDelay: offset ? `${offset}s` : undefined,
-          ["--marquee-duration" as const]: `${duration}s`,
-        }}
+        style={trackStyle}
       >
         {doubledAgents.map((agent, index) => (
           <LogoItem key={`${agent.name}-${index}`} {...agent} />
