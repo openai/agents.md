@@ -110,6 +110,12 @@ const agents: AgentEntry[] = [
     imageSrcLight: "/logos/devin-light.svg",
     imageSrcDark: "/logos/devin-dark.svg",
   },
+  {
+    name: "Coded Agents",
+    from: "UiPath",
+    url: "https://uipath.github.io/uipath-python",
+    imageSrc: "/logos/uipath.svg",
+  },
 ];
 
 const shuffleAgents = (items: AgentEntry[]) => {
