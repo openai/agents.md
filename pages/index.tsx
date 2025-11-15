@@ -44,7 +44,7 @@ let cachedContributors:
     }
   | undefined;
 
-export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
+export const getStaticProps: GetStaticProps<LandingPageProps> = async ({ locale }) => {
   // List of repositories displayed in ExampleListSection. Keep in sync with
   // the REPOS constant in that component.
   const repoNames = [
@@ -67,6 +67,7 @@ export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
     return {
       props: {
         contributorsByRepo: cachedContributors.data,
+        messages: (await import(`../messages/${locale}.json`)).default,
       },
       // No need to revalidate until the cache window expires.
       // (Next.js will still obey the value, it just determines the earliest
@@ -152,6 +153,7 @@ export const getStaticProps: GetStaticProps<LandingPageProps> = async () => {
   return {
     props: {
       contributorsByRepo,
+      messages: (await import(`../messages/${locale}.json`)).default,
     },
     // Revalidate every 24 hours in production. The in-memory cache prevents
     // us from hitting the limit during development between dev server restarts.

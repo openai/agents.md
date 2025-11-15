@@ -12,6 +12,7 @@
     "@tailwindcss/postcss": "4.1.11",
     "@vercel/analytics": "^1.5.0",
     "next": "15.4.4",
+    "next-intl": "^4.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwindcss": "4.1.11"

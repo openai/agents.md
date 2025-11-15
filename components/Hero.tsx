@@ -1,10 +1,17 @@
 import React from "react";
 import CodeExample, { HERO_AGENTS_MD } from "@/components/CodeExample";
 import GitHubIcon from "@/components/icons/GitHubIcon";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('hero');
+
   return (
     <header className="px-6 py-20 bg-gray-50 dark:bg-gray-900/40 border-b border-gray-100 dark:border-gray-800">
+      <div className="max-w-6xl mx-auto mb-6 flex justify-end">
+        <LanguageSwitcher />
+      </div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/*
           On large screens we want the primary CTA buttons to align with the
@@ -15,26 +22,28 @@ export default function Hero() {
           vertically.
         */}
         <div className="flex flex-col items-start text-left sm:items-start max-w-prose">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">AGENTS.md</h1>
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">{t('title')}</h1>
 
           <p className="mt-2 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-            A simple, open format for guiding coding agents,{" "}
-            <br className="hidden sm:block" />
-            used by over{" "}
-            <a
-              href="https://github.com/search?q=path%3AAGENTS.md&type=code"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:no-underline"
-            >
-              20k open-source projects
-            </a>
-            .
+            {t.rich('subtitle', {
+              br: () => <br className="hidden sm:block" />,
+              link: (chunks) => (
+                <a
+                  href="https://github.com/search?q=path%3AAGENTS.md&type=code"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:no-underline"
+                >
+                  {t('link20k')}
+                </a>
+              )
+            })}
           </p>
 
           <p className="mt-3 text-lg leading-relaxed text-gray-700 dark:text-gray-300 pr-4">
-            Think of AGENTS.md as a <strong>README for agents</strong>: a dedicated,
-            predictable place to provide the context and instructions to help AI coding agents work on your project.
+            {t.rich('description', {
+              strong: (chunks) => <strong>{t('readmeForAgents')}</strong>
+            })}
           </p>
 
         <div className="mt-6 flex gap-4 flex-col sm:flex-row w-full sm:w-auto justify-center sm:justify-start">
@@ -43,7 +52,7 @@ export default function Hero() {
             href="#examples"
             className="inline-block px-5 py-3 rounded-full bg-black text-white dark:bg-white dark:text-black text-sm font-medium text-center hover:opacity-80"
           >
-            Explore Examples
+            {t('exploreExamples')}
           </a>
           {/* Secondary CTA — view on GitHub */}
           <a
@@ -53,7 +62,7 @@ export default function Hero() {
             className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-gray-300 dark:border-gray-600 text-sm font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             <GitHubIcon className="w-4 h-4 text-current" />
-            View on GitHub
+            {t('viewOnGitHub')}
           </a>
         </div>
         </div>

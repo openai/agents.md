@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Section from "@/components/Section";
+import { useTranslations } from 'next-intl';
 
 type AgentEntry = {
   name: string;
@@ -140,6 +141,7 @@ function LogoItem({
   imageSrcDark,
   variant = "marquee",
 }: LogoItemProps) {
+  const t = useTranslations('compatibility');
   const baseClasses =
     variant === "grid"
       ? "flex h-full w-full min-w-0 items-center gap-4"
@@ -193,7 +195,7 @@ function LogoItem({
         </span>
         {from ? (
           <span className="text-sm text-gray-500 dark:text-gray-400">
-            <span className="font-light">from</span>{" "}
+            <span className="font-light">{t('from')}</span>{" "}
             <span className="font-semibold">{from}</span>
           </span>
         ) : null}
@@ -240,6 +242,7 @@ function LogoMarqueeRow({
 }
 
 export default function CompatibilitySection() {
+  const t = useTranslations('compatibility');
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isInView, setIsInView] = useState(false);
   const [shuffledAgents, setShuffledAgents] = useState<AgentEntry[]>(agents);
@@ -304,15 +307,14 @@ export default function CompatibilitySection() {
   return (
     <Section
       id="compatibility"
-      title="One AGENTS.md works across many agents"
+      title={t('title')}
       className={`py-12 px-0 ${showGrid ? "" : "!px-0"}`}
       center
       maxWidthClass={showGrid ? "max-w-3xl" : "max-w-none"}
     >
       <div className="mx-auto max-w-3xl text-center">
         <p className="text-xl font-light text-gray-500 dark:text-gray-400 px-8">
-          Your agent definitions are compatible with a growing ecosystem of AI
-          coding agents and tools:
+          {t('subtitle')}
         </p>
       </div>
       {showGrid ? (
@@ -347,7 +349,7 @@ export default function CompatibilitySection() {
           aria-controls="supported-agents"
           aria-expanded={showGrid}
         >
-          {showGrid ? "Collapse supported agents" : "View all supported agents"}
+          {showGrid ? t('collapse') : t('viewAll')}
         </button>
       </div>
     </Section>

@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "AGENTS.md",
+    "subtitle": "코딩 에이전트를 위한 간단하고 개방된 포맷, {br} {link}에서 사용 중.",
+    "link20k": "2만 개 이상의 오픈소스 프로젝트",
+    "description": "AGENTS.md는 {strong}로 생각하시면 됩니다: AI 코딩 에이전트가 프로젝트에서 작업할 수 있도록 컨텍스트와 지침을 제공하는 전용의 예측 가능한 장소입니다.",
+    "readmeForAgents": "에이전트를 위한 README",
+    "exploreExamples": "예제 살펴보기",
+    "viewOnGitHub": "GitHub에서 보기"
+  },
+  "why": {
+    "title": "왜 AGENTS.md인가요?",
+    "paragraph1": "README.md 파일은 사람을 위한 것입니다: 빠른 시작, 프로젝트 설명, 기여 가이드라인.",
+    "paragraph2": "AGENTS.md는 이를 보완하여 코딩 에이전트에 필요한 추가적이고 때로는 상세한 컨텍스트를 포함합니다: 빌드 단계, 테스트, README를 복잡하게 만들거나 인간 기여자에게 관련이 없는 규칙들.",
+    "paragraph3": "우리가 의도적으로 분리한 이유:",
+    "reason1Title": "에이전트에게 명확하고 예측 가능한 지침 장소를 제공합니다.",
+    "reason2Title": "README를 간결하게 유지하고 인간 기여자에게 집중합니다.",
+    "reason3Title": "기존 README 및 문서를 보완하는 정확한 에이전트 중심 가이드를 제공합니다.",
+    "paragraph4": "또 다른 독점 파일을 도입하는 대신, 누구나 사용할 수 있는 이름과 형식을 선택했습니다. 코딩 에이전트를 구축하거나 사용하고 있고 이것이 도움이 된다면 자유롭게 채택하세요."
+  },
+  "compatibility": {
+    "title": "하나의 AGENTS.md로 여러 에이전트에서 작동",
+    "subtitle": "에이전트 정의는 성장하는 AI 코딩 에이전트 및 도구 생태계와 호환됩니다:",
+    "viewAll": "지원되는 모든 에이전트 보기",
+    "collapse": "지원 에이전트 접기",
+    "from": "제공"
+  },
+  "examples": {
+    "title": "예제"
+  },
+  "howToUse": {
+    "title": "AGENTS.md를 어떻게 사용하나요?",
+    "step1Title": "AGENTS.md 추가",
+    "step1Body": "저장소 루트에 AGENTS.md 파일을 만듭니다. 대부분의 코딩 에이전트는 정중하게 요청하면 scaffold를 작성해줄 수 있습니다.",
+    "step2Title": "중요한 내용 다루기",
+    "step2Body": "에이전트가 프로젝트에서 효과적으로 작업할 수 있도록 돕는 섹션을 추가합니다. 인기 있는 선택:",
+    "step2Items": {
+      "item1": "프로젝트 개요",
+      "item2": "빌드 및 테스트 명령",
+      "item3": "코드 스타일 가이드라인",
+      "item4": "테스트 지침",
+      "item5": "보안 고려사항"
+    },
+    "step3Title": "추가 지침 추가",
+    "step3Body": "커밋 메시지나 풀 리퀘스트 가이드라인, 보안 주의사항, 대용량 데이터셋, 배포 단계: 새로운 팀원에게 말할 모든 것이 여기에 속합니다.",
+    "step4Title": "대규모 모노레포? 하위 프로젝트용 중첩 AGENTS.md 파일 사용",
+    "step4Body": "각 패키지 내부에 또 다른 AGENTS.md를 배치합니다. 에이전트는 디렉토리 트리에서 가장 가까운 파일을 자동으로 읽으므로 가장 가까운 파일이 우선하며 모든 하위 프로젝트는 맞춤형 지침을 제공할 수 있습니다. 예를 들어, 작성 시점 기준 메인 OpenAI 리포지토리에는 88개의 AGENTS.md 파일이 있습니다."
+  },
+  "about": {
+    "title": "소개",
+    "paragraph1": "AGENTS.md는 {openai}, {amp}, {jules}, {cursor}, {factory}를 포함한 AI 소프트웨어 개발 생태계 전반의 협력 노력에서 탄생했습니다.",
+    "paragraph2": "우리는 어떤 코딩 에이전트를 사용하든 전체 개발자 커뮤니티에 도움이 되는 개방형 포맷으로 이를 유지하고 발전시키는 데 전념하고 있습니다."
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "question1": "필수 필드가 있나요?",
+    "answer1": "아니요. AGENTS.md는 표준 마크다운일 뿐입니다. 원하는 제목을 사용하세요. 에이전트는 제공한 텍스트를 단순히 파싱합니다.",
+    "question2": "지침이 충돌하면 어떻게 되나요?",
+    "answer2": "편집된 파일에 가장 가까운 AGENTS.md가 우선하며, 명시적인 사용자 채팅 프롬프트가 모든 것을 재정의합니다.",
+    "question3": "에이전트가 AGENTS.md에서 찾은 테스트 명령을 자동으로 실행하나요?",
+    "answer3": "예—나열하면 실행합니다. 에이전트는 작업을 완료하기 전에 관련 프로그래밍 검사를 실행하고 실패를 수정하려고 시도합니다.",
+    "question4": "나중에 업데이트할 수 있나요?",
+    "answer4": "물론입니다. AGENTS.md를 살아있는 문서로 취급하세요.",
+    "question5": "기존 문서를 AGENTS.md로 마이그레이션하려면 어떻게 하나요?",
+    "answer5Intro": "기존 파일 이름을 AGENTS.md로 바꾸고 하위 호환성을 위해 심볼릭 링크를 만듭니다:",
+    "question6": "Aider를 어떻게 구성하나요?",
+    "answer6Intro": "{code}에서 AGENTS.md를 사용하도록 Aider를 구성합니다:",
+    "question7": "Gemini CLI를 어떻게 구성하나요?",
+    "answer7Intro": "{code}에서 AGENTS.md를 사용하도록 Gemini CLI를 구성합니다:"
+  }
+}

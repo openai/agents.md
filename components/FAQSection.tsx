@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "@/components/Section";
 import CodeExample from "@/components/CodeExample";
+import { useTranslations } from 'next-intl';
 
 interface FAQItem {
   question: string;
@@ -8,32 +9,31 @@ interface FAQItem {
 }
 
 export default function FAQ() {
+  const t = useTranslations('faq');
+
   const faqItems: FAQItem[] = [
     {
-      question: "Are there required fields?",
-      answer:
-        "No. AGENTS.md is just standard Markdown. Use any headings you like; the agent simply parses the text you provide.",
+      question: t('question1'),
+      answer: t('answer1'),
     },
     {
-      question: "What if instructions conflict?",
-      answer:
-        "The closest AGENTS.md to the edited file wins; explicit user chat prompts override everything.",
+      question: t('question2'),
+      answer: t('answer2'),
     },
     {
-      question: "Will the agent run testing commands found in AGENTS.md automatically?",
-      answer:
-        "Yes—if you list them. The agent will attempt to execute relevant programmatic checks and fix failures before finishing the task.",
+      question: t('question3'),
+      answer: t('answer3'),
     },
     {
-      question: "Can I update it later?",
-      answer: "Absolutely. Treat AGENTS.md as living documentation.",
+      question: t('question4'),
+      answer: t('answer4'),
     },
     {
-      question: "How do I migrate existing docs to AGENTS.md?",
+      question: t('question5'),
       answer: (
         <>
           <p className="mb-2">
-            Rename existing files to AGENTS.md and create symbolic links for backward compatibility:
+            {t('answer5Intro')}
           </p>
           <div className="w-full flex justify-center">
             <CodeExample
@@ -47,11 +47,13 @@ export default function FAQ() {
       ),
     },
     {
-      question: "How do I configure Aider?",
+      question: t('question6'),
       answer: (
         <>
           <p className="mb-2">
-            Configure Aider to use AGENTS.md in <code>.aider.conf.yml</code>:
+            {t.rich('answer6Intro', {
+              code: (chunks) => <code>.aider.conf.yml</code>
+            })}
           </p>
           <div className="w-full flex justify-center">
             <CodeExample
@@ -65,11 +67,13 @@ export default function FAQ() {
       ),
     },
     {
-      question: "How do I configure Gemini CLI?",
+      question: t('question7'),
       answer: (
         <>
           <p className="mb-2">
-            Configure Gemini CLI to use AGENTS.md in <code>.gemini/settings.json</code>:
+            {t.rich('answer7Intro', {
+              code: (chunks) => <code>.gemini/settings.json</code>
+            })}
           </p>
           <div className="w-full flex justify-center">
             <CodeExample
@@ -89,7 +93,7 @@ export default function FAQ() {
   return (
     <Section
       id="faq"
-      title="FAQ"
+      title={t('title')}
       className="py-20"
       center
       maxWidthClass="max-w-3xl"
