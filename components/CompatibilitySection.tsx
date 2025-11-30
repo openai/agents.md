@@ -56,6 +56,11 @@ const agents: AgentEntry[] = [
     imageSrc: "/logos/gemini.svg",
   },
   {
+    name: "goose",
+    url: "https://github.com/block/goose",
+    imageSrc: "/logos/goose.svg",
+  },
+  {
     name: "Kilo Code",
     url: "https://kilocode.ai/",
     imageSrc: "/logos/kilo-code.svg",
