@@ -111,7 +111,7 @@ const agents: AgentEntry[] = [
     imageSrcDark: "/logos/devin-dark.svg",
   },
   {
-    name: "Coded Agents",
+    name: "Autopilot & Coded Agents",
     from: "UiPath",
     url: "https://uipath.github.io/uipath-python",
     imageSrc: "/logos/uipath.svg",
