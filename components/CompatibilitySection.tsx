@@ -116,6 +116,13 @@ const agents: AgentEntry[] = [
     imageSrcDark: "/logos/devin-dark.svg",
   },
   {
+    name: "Windsurf",
+    from: "Cognition",
+    url: "https://windsurf.com",
+    imageSrcLight: "/logos/windsurf-light.svg",
+    imageSrcDark: "/logos/windsurf-dark.svg",
+  },
+  {
     name: "Autopilot & Coded Agents",
     from: "UiPath",
     url: "https://uipath.github.io/uipath-python",
