@@ -42,10 +42,10 @@ that explains the project’s goals in a simple way, and featuring some examples
 ### Running the app locally
 1. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 2. Start the development server:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 3. Open your browser and go to http://localhost:3000
