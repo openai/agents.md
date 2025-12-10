@@ -16,8 +16,8 @@ export default function HowToUseSection() {
       title: "Cover what matters",
       body: (
         <>
-          <p className="mb-2">Add sections that help an agent work effectively with your project. Popular choices:</p>
-          <ul className="list-disc list-inside ml-4 space-y-1">
+          <p className="mb-3">Add sections that help an agent work effectively with your project. Popular choices:</p>
+          <ul className="list-disc list-inside ml-4 space-y-2 text-[var(--foreground)]/80">
             <li>Project overview</li>
             <li>Build and test commands</li>
             <li>Code style guidelines</li>
@@ -29,7 +29,11 @@ export default function HowToUseSection() {
     },
     {
       title: "Add extra instructions",
-      body: "Commit messages or pull request guidelines, security gotchas, large datasets, deployment steps: anything you’d tell a new teammate belongs here too.",
+      body: (
+        <>
+          Commit messages or pull request guidelines, security gotchas, large datasets, deployment steps: anything you’d tell a new teammate belongs here too.
+        </>
+      ),
     },
     {
       title: "Large monorepo? Use nested AGENTS.md files for subprojects",
@@ -49,13 +53,13 @@ export default function HowToUseSection() {
       center
       maxWidthClass="max-w-3xl"
     >
-      <div className="space-y-6 text-left">
+      <div className="space-y-8">
         {steps.map((s, idx) => (
-          <div key={idx}>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          <div key={idx} className="bg-white/50 dark:bg-gray-800/30 p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold text-[var(--foreground)] mb-3">
               {idx + 1}. {s.title}
             </h3>
-            <div className="text-gray-700 dark:text-gray-300">
+            <div className="text-[var(--foreground)]/90 leading-relaxed">
               {s.body}
             </div>
           </div>

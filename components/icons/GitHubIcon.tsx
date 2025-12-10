@@ -4,13 +4,17 @@ interface GitHubIconProps {
   className?: string;
 }
 
-// The path data is the official GitHub mark (see https://github.com/logos).
+/**
+ * Official GitHub mark.
+ * https://github.com/logos
+ */
 export default function GitHubIcon({ className = "w-4 h-4" }: GitHubIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 98 96"
       className={className}
+      role="img"
       aria-hidden="true"
     >
       <path

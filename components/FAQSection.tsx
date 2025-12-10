@@ -32,7 +32,7 @@ export default function FAQ() {
       question: "How do I migrate existing docs to AGENTS.md?",
       answer: (
         <>
-          <p className="mb-2">
+          <p className="mb-3 text-[var(--foreground)]/90">
             Rename existing files to AGENTS.md and create symbolic links for backward compatibility:
           </p>
           <div className="w-full flex justify-center">
@@ -50,8 +50,8 @@ export default function FAQ() {
       question: "How do I configure Aider?",
       answer: (
         <>
-          <p className="mb-2">
-            Configure Aider to use AGENTS.md in <code>.aider.conf.yml</code>:
+          <p className="mb-3 text-[var(--foreground)]/90">
+            Configure Aider to use AGENTS.md in <code className="text-[var(--foreground)]/90">.aider.conf.yml</code>:
           </p>
           <div className="w-full flex justify-center">
             <CodeExample
@@ -68,8 +68,8 @@ export default function FAQ() {
       question: "How do I configure Gemini CLI?",
       answer: (
         <>
-          <p className="mb-2">
-            Configure Gemini CLI to use AGENTS.md in <code>.gemini/settings.json</code>:
+          <p className="mb-3 text-[var(--foreground)]/90">
+            Configure Gemini CLI to use AGENTS.md in <code className="text-[var(--foreground)]/90">.gemini/settings.json</code>:
           </p>
           <div className="w-full flex justify-center">
             <CodeExample
@@ -90,17 +90,21 @@ export default function FAQ() {
     <Section
       id="faq"
       title="FAQ"
-      className="py-20"
+      className="py-20 bg-[#FFFAF1] dark:bg-transparent"
       center
       maxWidthClass="max-w-3xl"
     >
-      <div className="space-y-8 max-w-4xl mx-auto">
+      <div className="space-y-6 max-w-4xl mx-auto">
         {faqItems.map((item, index) => (
-          <div key={index}>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          <div
+            key={index}
+            className="bg-white/90 hover:bg-[#FFFAF1] dark:bg-gray-800/50 dark:hover:bg-gray-800/70
+                       p-6 rounded-lg shadow-sm transition-colors duration-200 border border-gray-100 dark:border-gray-700"
+          >
+            <h3 className="text-xl font-semibold text-[var(--foreground)] mb-3">
               {item.question}
             </h3>
-            <div className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            <div className="text-[var(--foreground)]/90 leading-relaxed">
               {item.answer}
             </div>
           </div>
