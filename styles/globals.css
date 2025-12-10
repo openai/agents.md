@@ -1,104 +1,91 @@
 @import "tailwindcss";
 
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Regular.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-RegularItalic.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: normal;
-  font-weight: 500;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Medium.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: italic;
-  font-weight: 500;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-MediumItalic.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Semibold.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-SemiboldItalic.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Bold.woff2')
-    format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'OpenAI Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-BoldItalic.woff2')
-    format('woff2');
-}
-
+/* ---------- Theme Variables ---------- */
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --font-sans: 'OpenAI Sans', Arial, Helvetica, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: 'OpenAI Sans', Arial, Helvetica, sans-serif;
-  --font-mono: var(--font-geist-mono);
+/* When dark theme class is applied */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ---------- Base Styles ---------- */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
 }
 
-/* Ensure code blocks wrap and do not scroll horizontally */
+/* ---------- Fonts ---------- */
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-RegularItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-SemiboldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'OpenAI Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('https://cdn.openai.com/common/fonts/openai-sans/OpenAISans-BoldItalic.woff2') format('woff2');
+}
+
+/* ---------- Extra Styles ---------- */
 pre {
   overflow-x: visible;
   white-space: pre-wrap;
@@ -113,20 +100,9 @@ code {
 .logo-marquee-track {
   width: max-content;
   animation: logo-marquee-scroll var(--marquee-duration, 70s) linear infinite;
-  will-change: transform;
 }
 
 @keyframes logo-marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .logo-marquee-track {
-    animation: none;
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }

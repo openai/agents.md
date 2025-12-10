@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@tailwindcss/postcss": "4.1.11",
     "@vercel/analytics": "^1.5.0",
     "next": "15.4.8",
+    "next-themes": "^0.4.6",
     "react": "19.1.2",
     "react-dom": "19.1.2",
     "tailwindcss": "4.1.11"
