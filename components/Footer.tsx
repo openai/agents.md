@@ -7,7 +7,7 @@ export default function Footer() {
         AGENTS.md
         <br />
         An open community standard stewarded by the{" "}
-        <a href="https://aaif.io" target="_blank">
+        <a href="https://aaif.io" target="_blank" className="underline hover:no-underline">
           Agentic AI Foundation (AAIF)
         </a>
       </p>

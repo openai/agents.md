@@ -17,7 +17,16 @@ const AboutSection = () => (
       regardless of which coding agent you use.
     </p>
 
-    
+    <p className="max-w-3xl mt-4">
+      AGENTS.md is now stewarded by the Agentic AI Foundation under the Linux Foundation.{" "}
+      <a
+        href="https://openai.com/index/agentic-ai-foundation/"
+        className="underline hover:no-underline"
+      >
+        Learn more &rarr;
+      </a>
+    </p>
+
   </Section>
 );
 
