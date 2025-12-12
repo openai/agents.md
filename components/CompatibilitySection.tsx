@@ -128,6 +128,11 @@ const agents: AgentEntry[] = [
     url: "https://uipath.github.io/uipath-python",
     imageSrc: "/logos/uipath.svg",
   },
+  {
+    name: "Copilot CLI",
+    url: "https://gh.io/copilot-cli-docs",
+    imageSrc: "/logos/copilot-cli.svg",
+  },
 ];
 
 const shuffleAgents = (items: AgentEntry[]) => {
