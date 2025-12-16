@@ -18,7 +18,11 @@ const AboutSection = () => (
     </p>
 
     <p className="max-w-3xl mt-4">
-      AGENTS.md is now stewarded by the Agentic AI Foundation under the Linux Foundation.{" "}
+      AGENTS.md is now stewarded by the{" "}
+      <a href="https://aaif.io" className="underline hover:no-underline">
+        Agentic AI Foundation
+      </a>{" "}
+      under the Linux Foundation.{" "}
       <a
         href="https://openai.com/index/agentic-ai-foundation/"
         className="underline hover:no-underline"
