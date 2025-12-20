@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "@/components/Section";
 import CodeExample from "@/components/CodeExample";
+import Link from "next/link";
 
 interface FAQItem {
   question: string;
@@ -46,43 +47,14 @@ export default function FAQ() {
         </>
       ),
     },
-    {
-      question: "How do I configure Aider?",
-      answer: (
-        <>
-          <p className="mb-2">
-            Configure Aider to use AGENTS.md in <code>.aider.conf.yml</code>:
-          </p>
-          <div className="w-full flex justify-center">
-            <CodeExample
-              code="read: AGENTS.md"
-              compact
-              heightClass="min-h-[48px]"
-              centerVertically
-            />
-          </div>
-        </>
-      ),
-    },
-    {
-      question: "How do I configure Gemini CLI?",
-      answer: (
-        <>
-          <p className="mb-2">
-            Configure Gemini CLI to use AGENTS.md in <code>.gemini/settings.json</code>:
-          </p>
-          <div className="w-full flex justify-center">
-            <CodeExample
-              code='{
-  "contextFileName": "AGENTS.md"
-}'
-              compact
-              heightClass="min-h-[48px]"
-              centerVertically
-            />
-          </div>
-        </>
-      ),
+    { question: "What if my agent doesn't support AGENTS.md natively?",
+      answer: (<>
+        <p className="mb-2">
+        If your agent doesn't use AGENTS.md per default, you can still {" "}
+        <Link className="underline hover:no-underline" href="#configuration">configure your agent</Link> to use it.
+        </p>
+      </>
+    )
     },
   ];
 
