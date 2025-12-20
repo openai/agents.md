@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.1.11",
@@ -23,5 +24,9 @@
     "@types/react-dom": "19",
     "typescript": "5"
   },
-  "packageManager": "pnpm@9.15.1+sha256.9e534e70afef06374f6126b44bda5760947135ce16a30aef1010e965fb7e3e3e"
+  "packageManager": "pnpm@9.15.1+sha256.9e534e70afef06374f6126b44bda5760947135ce16a30aef1010e965fb7e3e3e",
+  "engines": {
+    "node": ">=18.17.0",
+    "pnpm": ">=9.0.0"
+  }
 }
